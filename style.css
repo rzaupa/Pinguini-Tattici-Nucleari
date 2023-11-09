@@ -36,7 +36,7 @@ header {
     padding: 1em;
 }
 
-header h1{
+header h1 {
     text-indent: -999em;
     background-image: url("../LabHTML/materialePerStudenti/images/logo.png");
     background-size: contain;
@@ -117,7 +117,7 @@ main.colonne div dd {
     text-transform: uppercase;
 }
 
-.soldOut{
+.soldout {
     background-image: url("../LabHTML/materialePerStudenti/images/soldout.png");
     background-size: contain;
     background-repeat: no-repeat;
