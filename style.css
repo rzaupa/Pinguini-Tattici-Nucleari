@@ -15,7 +15,7 @@
 
     --visitedLinkColor: rgb(230, 12, 83);
     --linkColor: rgb(255, 255, 255);
-
+    --headTable: rgb(230, 12, 83);
     --flagColor: rgb(218, 103, 66);
 
     --font-body-family: "Roboto Condensed", san-serif;
@@ -27,6 +27,12 @@ html {
     line-height: 1.5em;
     margin: auto;
     background-image: url("/LabHTML/materialePerStudenti/images/bg.png");
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -44,6 +50,12 @@ header h1 {
     background-position: center;
     font-size: 4em;
     line-height: 1.5;
+}
+
+main h2 {
+    text-align: center;
+    margin: 1em;
+    font-size: 2em;
 }
 
 nav {
@@ -149,4 +161,42 @@ footer {
     padding: 1.0em;
     text-align: center;
     margin-top: auto;
+}
+
+/***************
+* COMPONENTI *
+*****************/
+#componenti {
+    margin: auto;
+    width: 95%;
+    max-width: 1024px;
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+#componenti>dt {
+    background-color: var(--headTable);
+    color: var(--txtColor);
+    border: 1px solid black;
+    padding: 0.5em;
+    font-size: 1.1em;
+}
+
+#componenti>dd {
+    background-color: var(--bgColor);
+    border: 1px solid black;
+    border-top: none;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+#componenti>dd img {
+    width: 15%;
+    float: left;
+    margin-right: 1em;
+}
+
+.componente dt {
+    float: left;
+    font-weight: bold;
 }
