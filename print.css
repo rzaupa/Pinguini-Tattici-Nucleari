@@ -67,6 +67,14 @@ main.colone div> :not(:last-child)::after {
     margin: auto;
 }
 
+main.colonne div:not(.soldout)::after{
+    content:"- Biglietti disponibili";
+}
+
+main.colonne div:not(.not_soldout)::after{
+    content:"- Biglietti non disponibili";
+}
+
 #componenti>dt {}
 
 footer {
