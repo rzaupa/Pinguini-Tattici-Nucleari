@@ -31,3 +31,35 @@ main.colonne {
 #componenti {
     width: 98%;
 }
+
+/** 
+TABELLA
+**/
+thead {
+    display: none;
+}
+
+tr,
+th,
+td {
+    display: block;
+}
+
+th {
+    background-color: var(--flagColor);
+    color: var(--headerTxtColor);
+    border-bottom: 1px solid black;
+}
+
+th[data-title]::before {
+    content: attr(data-title) ":\00A0";
+    font-weight: bold;
+}
+
+tr {
+    border: 1px solid black;
+}
+
+.soldout {
+    background-image: none;
+}

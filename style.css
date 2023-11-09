@@ -200,3 +200,35 @@ footer {
     float: left;
     font-weight: bold;
 }
+
+/******
+TABELLA
+*******/
+
+main table {
+    margin: auto;
+    width: 95%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 0.5em;
+}
+
+th {
+    font-weight: normal;
+}
+
+th {
+    font-weight: normal;
+}
+
+th time span {
+    font-weight: bold;
+}
+
+thead {
+    background-color: var(--flagColor);
+    color: var(--headerTxtColor);
+}
