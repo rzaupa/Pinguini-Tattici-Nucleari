@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 12pt;
+    font-family: "Time New Roman", serif;
+    line-height: 1.5em;
+    margin: auto;
+}
+
+header {
+    text-align: left;
+    padding: 1em 0 1em 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+header h1 {
+    content: url("../LabHTML/materialePerStudenti/images/logo.png");
+    width: 4cm;
+    filter: invert(100%);
+    margin: auto;
+}
+
+#menu {
+    display: none;
+}
+
+#breadcrumb {
+    padding: 0.5em 0 0.5em 0;
+    margin-top: 0.5em;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    font-weight: bold;
+}
+
+#imgIndex {
+    float: left;
+    width: 20%;
+}
+
+main dl {
+    margin-left: 22%;
+}
+
+main.colonne dl {
+    margin-left: 22%;
+}
+
+main.colonne div dt,
+main.colonne div dd {
+    display: inline;
+}
+
+main.colonne div dt {
+    font-weight: bold;
+}
+
+main.colone div> :not(:last-child)::after {
+    content: " - ";
+}
+
+#componenti {
+    width: 95%;
+    margin: auto;
+}
+
+main.colonne div:not(.soldout)::after{
+    content:"- Biglietti disponibili";
+}
+
+main.colonne div:not(.not_soldout)::after{
+    content:"- Biglietti non disponibili";
+}
+
+#componenti>dt {}
+
+footer {
+    text-align: center;
+    font-size: 10pt;
+    font-style: italic;
+    border-top: 1px solid #DDD;
+    padding: 1.3em 0.5em 0.5em;
+}

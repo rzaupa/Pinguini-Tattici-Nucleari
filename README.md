@@ -1,2 +1,2 @@
 # Pinguini-Tattici-Nucleari
-Progetto di laboratorio di Tecnologie Web A.A. 2023/24
+Progetto di laboratorio del corso di Tecnologie Web A.A. 2023/24
