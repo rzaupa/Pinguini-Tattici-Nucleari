@@ -26,7 +26,7 @@ html {
     font-family: var(--font-body-family);
     line-height: 1.5em;
     margin: auto;
-    background-image: url("/LabHTML/materialePerStudenti/images/bg.png");
+    background-image: url("LabHTML/materialePerStudenti/images/bg.png");
 }
 
 body {
@@ -44,7 +44,7 @@ header {
 
 header h1 {
     text-indent: -999em;
-    background-image: url("../LabHTML/materialePerStudenti/images/logo.png");
+    background-image: url("LabHTML/materialePerStudenti/images/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -130,7 +130,7 @@ main.colonne div dd {
 }
 
 .soldout {
-    background-image: url("../LabHTML/materialePerStudenti/images/soldout.png");
+    background-image: url("LabHTML/materialePerStudenti/images/soldout.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

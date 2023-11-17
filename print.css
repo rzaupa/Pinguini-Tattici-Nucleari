@@ -18,7 +18,7 @@ header {
 }
 
 header h1 {
-    content: url("../LabHTML/materialePerStudenti/images/logo.png");
+    content: url("LabHTML/materialePerStudenti/images/logo.png");
     width: 4cm;
     filter: invert(100%);
     margin: auto;
