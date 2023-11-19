@@ -1,3 +1,8 @@
+/******
+COMUNE
+*******/
+
+
 * {
     margin: 0;
     padding: 0;
@@ -26,13 +31,15 @@ html {
     font-family: var(--font-body-family);
     line-height: 1.5em;
     margin: auto;
-    background-image: url("LabHTML/materialePerStudenti/images/bg.png");
+    background-image: url("../Pinguini-Tattici-Nucleari-master/LabHTML/materialePerStudenti/images/bg.png");
+    
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    
 }
 
 header {
@@ -43,15 +50,17 @@ header {
 }
 
 header h1 {
+    /*dato che text-indent: -999em ha senso specificare il font-size e il line height???*/
     text-indent: -999em;
     background-image: url("LabHTML/materialePerStudenti/images/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    font-size: 4em;
-    line-height: 1.5;
+    font-size: 4em; /*credo inutile*/
+    line-height: 1.5;/*credo inutile*/
 }
 
+/*Non ci sono h2 -> inutile*/
 main h2 {
     text-align: center;
     margin: 1em;
@@ -70,7 +79,7 @@ nav a:visited {
 nav a:link {
     color: var(--linkColor);
 }
-
+/* ELIMINABILE? REGOLE GIà DESCRITTE NEI NAV PRECEDENTI!
 #menu a:link {
     color: var(--linkColor);
 }
@@ -78,7 +87,7 @@ nav a:link {
 #menu a:visited {
     color: var(--visitedLinkColor);
 }
-
+*/
 #menu {
     text-align: center;
 }
@@ -106,49 +115,27 @@ nav a:link {
 }
 
 main {
-    background-color: var(--bgColor);
     color: var(--txtColor);
     margin: auto;
     width: 80%;
 }
 
-.colonne dl {
-    font-size: 90%;
-    margin: auto;
-}
-
 main.colonne {
+    column-width: 29em;
     column-count: 3;
-    width: 90%;
-}
-
-main.colonne div dt,
-main.colonne div dd {
-    /*la prof ha le righe*/
-    display: inline;
-    text-transform: uppercase;
-}
-
-.soldout {
-    background-image: url("LabHTML/materialePerStudenti/images/soldout.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-dd[data-title="Citta"] {
-    /*la prof ha le righe*/
-    color: var(--flagColor);
-    font-weight: bold;
+    
 }
 
 main.colonne time span {
     font-weight: bold;
 }
 
-main dl div {
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
+
+.soldout {
+    background-image: url("LabHTML/materialePerStudenti/images/soldout.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #imgIndex {
@@ -162,6 +149,95 @@ footer {
     text-align: center;
     margin-top: auto;
 }
+/******
+HOME_TABELLA
+*******/
+
+main table {
+    margin: auto;
+    width: 95%;
+    border-collapse: collapse;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+th, td {
+    padding: 0.5em;
+    
+}
+
+th {
+    font-weight: normal;
+}
+td{
+    font-weight: normal;
+    
+}
+th time {
+    font-weight: bold;
+}
+
+thead {
+    background-color: var(--flagColor);
+    color: var(--headerTxtColor);
+}
+
+.colonne table {
+    font-size: 90%;
+    margin: auto;
+}
+
+
+
+main.colonne th,
+main.colonne td {
+    display: inline;
+    width:30%;
+    text-transform: uppercase;
+}
+
+
+
+td[data-title="Citta"] {
+    color: var(--flagColor);
+    font-weight: bold;
+}
+
+
+
+
+/******
+HOME_LISTA
+*******/
+
+.colonne dl {
+    font-size: 90%;
+    margin: auto;
+}
+
+
+
+main.colonne div dt,
+main.colonne div dd {
+    /*la prof ha le righe*/
+    display: inline;
+    text-transform: uppercase;
+}
+
+
+
+dd[data-title="Citta"] {
+    /*la prof ha le righe*/
+    color: var(--flagColor);
+    font-weight: bold;
+}
+
+
+main dl div {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
 
 /***************
 * COMPONENTI *
@@ -179,7 +255,8 @@ footer {
     color: var(--txtColor);
     border: 1px solid black;
     padding: 0.5em;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 #componenti>dd {
@@ -199,36 +276,4 @@ footer {
 .componente dt {
     float: left;
     font-weight: bold;
-}
-
-/******
-TABELLA
-*******/
-
-main table {
-    margin: auto;
-    width: 95%;
-    border-collapse: collapse;
-}
-
-th,
-td {
-    padding: 0.5em;
-}
-
-th {
-    font-weight: normal;
-}
-
-th {
-    font-weight: normal;
-}
-
-th time span {
-    font-weight: bold;
-}
-
-thead {
-    background-color: var(--flagColor);
-    color: var(--headerTxtColor);
 }
