@@ -48,19 +48,15 @@ header {
 }
 
 header h1 {
-    /*dato che text-indent: -999em ha senso specificare il font-size e il line height???*/
     text-indent: -999em;
     background-image: url("images/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    font-size: 4em;
-    /*credo inutile*/
+    font-size: 4em; 
     line-height: 1.5;
-    /*credo inutile*/
 }
 
-/*Non ci sono h2 -> inutile*/
 main h2 {
     text-align: center;
     margin: 1em;
@@ -116,16 +112,16 @@ nav a:link {
 }
 
 main {
-    background-color: var(--bgColor); /*bre non voleva questa riga*/
+    /*background-color: var(--bgColor); */
     color: var(--txtColor);
     margin: auto;
     width: 80%;
 }
 
 main.colonne {
+    /*width: 90% */
     column-width: 29em;
     column-count: 3;
-
 }
 
 main.colonne time span {
