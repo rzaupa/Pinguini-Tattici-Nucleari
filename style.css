@@ -2,6 +2,11 @@
 COMUNE
 *******/
 
+.navigationHelp{
+    position: absolute;
+    text-indent: -999em;
+}
+
 
 * {
     margin: 0;
