@@ -116,7 +116,7 @@ nav a:link {
 }
 
 main {
-    background-color: var(--bgColor); /*bre non voleva questa riga*/
+    /*background-color: var(--bgColor);*/ /*bre non voleva questa riga*/
     color: var(--txtColor);
     margin: auto;
     width: 80%;
