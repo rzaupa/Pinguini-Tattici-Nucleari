@@ -119,9 +119,13 @@ main {
 }
 
 main.colonne {
-    /*width: 90% */
+    /*width: 90% */ 
     column-width: 29em;
     column-count: 3;
+    /* prima di bre 
+    column-count: 3;
+    width: 90%
+    */
 }
 
 main.colonne time span {
@@ -156,6 +160,7 @@ main table {
     margin: auto;
     width: 95%;
     border-collapse: collapse;
+    /* le due righe sotto non c'erano prima di bre*/
     padding-top: 0.3em;
     padding-bottom: 0.3em;
 }
@@ -255,8 +260,8 @@ main dl div {
     color: var(--txtColor);
     border: 1px solid black;
     padding: 0.5em;
-    font-size: 1.2em;
-    font-weight: bold;
+    font-size: 1.2em; /*prima di bre era 1.1em*/
+    font-weight: bold; /* prima di bre non c'era*/
 }
 
 #componenti>dd {
