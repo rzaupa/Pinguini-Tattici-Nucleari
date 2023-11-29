@@ -31,15 +31,13 @@ html {
     font-family: var(--font-body-family);
     line-height: 1.5em;
     margin: auto;
-    background-image: url("../Pinguini-Tattici-Nucleari-master/LabHTML/materialePerStudenti/images/bg.png");
-    
+    background-image: url("images/bg.png");
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    
 }
 
 header {
@@ -52,12 +50,14 @@ header {
 header h1 {
     /*dato che text-indent: -999em ha senso specificare il font-size e il line height???*/
     text-indent: -999em;
-    background-image: url("LabHTML/materialePerStudenti/images/logo.png");
+    background-image: url("images/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    font-size: 4em; /*credo inutile*/
-    line-height: 1.5;/*credo inutile*/
+    font-size: 4em;
+    /*credo inutile*/
+    line-height: 1.5;
+    /*credo inutile*/
 }
 
 /*Non ci sono h2 -> inutile*/
@@ -79,7 +79,8 @@ nav a:visited {
 nav a:link {
     color: var(--linkColor);
 }
-/* ELIMINABILE? REGOLE GIà DESCRITTE NEI NAV PRECEDENTI!
+
+/* ELIMINABILE? REGOLE GIà DESCRITTE NEI NAV PRECEDENTI! */
 #menu a:link {
     color: var(--linkColor);
 }
@@ -87,7 +88,7 @@ nav a:link {
 #menu a:visited {
     color: var(--visitedLinkColor);
 }
-*/
+
 #menu {
     text-align: center;
 }
@@ -115,6 +116,7 @@ nav a:link {
 }
 
 main {
+    background-color: var(--bgColor); /*bre non voleva questa riga*/
     color: var(--txtColor);
     margin: auto;
     width: 80%;
@@ -123,7 +125,7 @@ main {
 main.colonne {
     column-width: 29em;
     column-count: 3;
-    
+
 }
 
 main.colonne time span {
@@ -132,7 +134,7 @@ main.colonne time span {
 
 
 .soldout {
-    background-image: url("LabHTML/materialePerStudenti/images/soldout.png");
+    background-image: url("images/soldout.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -149,6 +151,7 @@ footer {
     text-align: center;
     margin-top: auto;
 }
+
 /******
 HOME_TABELLA
 *******/
@@ -161,18 +164,19 @@ main table {
     padding-bottom: 0.3em;
 }
 
-th, td {
+th,
+td {
     padding: 0.5em;
-    
 }
 
 th {
     font-weight: normal;
 }
-td{
+
+td {
     font-weight: normal;
-    
 }
+
 th time {
     font-weight: bold;
 }
@@ -192,7 +196,7 @@ thead {
 main.colonne th,
 main.colonne td {
     display: inline;
-    width:30%;
+    width: 30%;
     text-transform: uppercase;
 }
 
