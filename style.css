@@ -2,6 +2,11 @@
 COMUNE
 *******/
 
+.navigationHelp{
+    position: absolute;
+    text-indent: -999em;
+}
+
 
 * {
     margin: 0;
@@ -112,7 +117,7 @@ nav a:link {
 }
 
 main {
-    /*background-color: var(--bgColor); */
+    /*background-color: var(--bgColor); bre non voleva questa riga*/
     color: var(--txtColor);
     margin: auto;
     width: 80%;
