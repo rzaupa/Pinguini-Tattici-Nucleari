@@ -82,6 +82,11 @@ nav a:link {
 }
 
 /* ELIMINABILE? REGOLE GIà DESCRITTE NEI NAV PRECEDENTI! */
+#content > p{
+    text-indent: -999em;
+    position: absolute;
+}
+
 #menu a:link {
     color: var(--linkColor);
 }
