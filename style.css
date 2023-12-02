@@ -158,6 +158,26 @@ footer {
 }
 
 /******
+DISCOGRAFIA
+*******/
+article img{
+    width: 15em;
+    margin: 5em;
+    transform: scale(1.0);
+    transition: .1s;
+}
+img:hover{
+    transform: scale(1.1);
+    transition: .3s;
+}
+article{
+    column-width: 50%;
+    text-align: center;
+}
+
+
+
+/******
 HOME_TABELLA
 *******/
 
