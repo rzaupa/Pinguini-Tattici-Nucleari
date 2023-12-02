@@ -2,7 +2,7 @@
 COMUNE
 *******/
 
-.navigationHelp{
+.navigationHelp {
     position: absolute;
     text-indent: -999em;
 }
@@ -58,7 +58,7 @@ header h1 {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    font-size: 4em; 
+    font-size: 4em;
     line-height: 1.5;
 }
 
@@ -124,7 +124,7 @@ main {
 }
 
 main.colonne {
-    /*width: 90% */ 
+    /*width: 90% */
     column-width: 29em;
     column-count: 3;
     /* prima di bre 
@@ -160,6 +160,72 @@ footer {
 /******
 DISCOGRAFIA
 *******/
+
+#fakenews {
+    background-image: url('images/fakenews.jpg');
+}
+
+#ahia {
+    background-image: url('images/ahia.jpg');
+}
+
+#gioventubruciata {
+    background-image: url('images/gioventubrucata.jpg');
+}
+
+#fuoridallhype {
+    background-image: url('images/fuorihype.jpg');
+}
+
+article {
+    column-width: 50%;
+    text-align: center;
+}
+
+.albums-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.album {
+    position: relative;
+    width: 15em;
+    height: 15em;
+    margin: 5em;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    /*transition: transform 0.3s ease;*/
+    transition: .1s;
+    transform: scale(1.0);
+}
+
+.album:hover {
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.album a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.album:hover a {
+    display: block;
+}
+
 article img{
     width: 15em;
     margin: 5em;
@@ -170,12 +236,6 @@ img:hover{
     transform: scale(1.1);
     transition: .3s;
 }
-article{
-    column-width: 50%;
-    text-align: center;
-}
-
-
 
 /******
 HOME_TABELLA
@@ -285,8 +345,10 @@ main dl div {
     color: var(--txtColor);
     border: 1px solid black;
     padding: 0.5em;
-    font-size: 1.2em; /*prima di bre era 1.1em*/
-    font-weight: bold; /* prima di bre non c'era*/
+    font-size: 1.2em;
+    /*prima di bre era 1.1em*/
+    font-weight: bold;
+    /* prima di bre non c'era*/
 }
 
 #componenti>dd {
