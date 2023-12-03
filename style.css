@@ -160,10 +160,6 @@ footer {
 /******
 DISCOGRAFIA
 *******/
-article {
-    column-width: 50%;
-    text-align: center;
-}
 
 .albums-list {
     list-style: none;
