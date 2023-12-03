@@ -173,6 +173,7 @@ article {
     justify-content: center;
     /* centra gli elementi della lista*/
     padding: 0;
+    flex-wrap: wrap;
 }
 
 
@@ -184,12 +185,6 @@ article {
     height: 15em;
     background-size: cover;
     /* ridimensiona l'immagine in modo da non distorcerla*/
-    /*
-    overflow: hidden;
-    background-position: center;
-    position: relative;
-    */
-    /*transition: transform 0.3s ease;*/
 }
 
 .album:hover {
@@ -198,10 +193,12 @@ article {
 }
 
 .album a {
-    display: flex; /*per manipolare il link all'interno dell'elemento*/
+    display: flex;
+    /*per manipolare il link all'interno dell'elemento*/
     width: 100%;
     height: 100%;
-    opacity: 0; /*nascondere il link*/  
+    opacity: 0;
+    /*nascondere il link*/
 }
 
 #fakenews {
@@ -212,12 +209,20 @@ article {
     background-image: url('images/ahia.jpg');
 }
 
+#ringostarr {
+    background-image: url('images/fuorihyperingo.jpg');
+}
+
 #gioventubruciata {
     background-image: url('images/gioventubrucata.jpg');
 }
 
 #fuoridallhype {
     background-image: url('images/fuorihype.jpg');
+}
+
+#calcio {
+    background-image: url('images/calcio.jpg');
 }
 
 /******
