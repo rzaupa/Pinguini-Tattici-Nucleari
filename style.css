@@ -2,7 +2,7 @@
 COMUNE
 *******/
 
-.navigationHelp{
+.navigationHelp {
     position: absolute;
     text-indent: -999em;
 }
@@ -58,7 +58,7 @@ header h1 {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    font-size: 4em; 
+    font-size: 4em;
     line-height: 1.5;
 }
 
@@ -82,7 +82,7 @@ nav a:link {
 }
 
 /* ELIMINABILE? REGOLE GIà DESCRITTE NEI NAV PRECEDENTI! */
-#content > p{
+#content>p {
     text-indent: -999em;
     position: absolute;
 }
@@ -129,7 +129,7 @@ main {
 }
 
 main.colonne {
-    /*width: 90% */ 
+    /*width: 90% */
     column-width: 29em;
     column-count: 3;
     /* prima di bre 
@@ -270,8 +270,10 @@ main dl div {
     color: var(--txtColor);
     border: 1px solid black;
     padding: 0.5em;
-    font-size: 1.2em; /*prima di bre era 1.1em*/
-    font-weight: bold; /* prima di bre non c'era*/
+    font-size: 1.2em;
+    /*prima di bre era 1.1em*/
+    font-weight: bold;
+    /* prima di bre non c'era*/
 }
 
 #componenti>dd {
@@ -291,4 +293,14 @@ main dl div {
 .componente dt {
     float: left;
     font-weight: bold;
+}
+
+
+/***************
+* BIOGRAFIA *
+*****************/
+
+
+#biografia {
+    background: url('images/bg.png'), url('images/band.webp') no-repeat bottom left;
 }
