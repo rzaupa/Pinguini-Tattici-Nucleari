@@ -6,25 +6,31 @@
     <title>Pinguini Tattici Nucleari</title>
     <meta name="keywords" content="Pinguini Tattici Nucleari, fake news tour 2024, concerti">
     <meta name="description" content="Sito ufficiale dei Pinguini Tattici Nucleari, gruppo fondato da Riccardo Zanotti">
-    <link rel="stylesheet" href="style.css" media="screen">
-    <link rel="stylesheet" href="mini.css" media="screen and (max-width:600px)">
-    <link rel="stylesheet" href="print.css" media="print">
+    <meta name="author" content="Riccardo Zaupa, Alessandro Bressan">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="mini.css" media="screen and (max-width:600px)">
+    <link rel="stylesheet" type="text/css" href="print.css" media="print">
+    <link rel="shortcut icon" type="images/png" href="images/icon-penguin.png">
 </head>
 
 <body>
-    <header>
+    <header id="header">
+        <nav aria-label="Aiuti alla navigazione">
+            <a class="navigationHelp" href="#content">Vai al contenuto</a>
+        </nav>
         <h1>Pinguini Tattici Nucleari</h1>
     </header>
-    <nav id="menu">
+    <nav id="menu" aria-label="site menu">
+        <a class="navigationHelp" href="#content">Salta il menù di navigazione</a>
         <ul>
-            <li lang="en">Home</li>
+            <li id="currentLink"><span lang="en">Home</span></li>
             <li><a href="biografia.html">Biografia</a></li>
             <li><a href="componenti.html">Componenti</a></li>
             <li><a href="discografia.html">Discografia</a></li>
         </ul>
     </nav>
-    <nav id="breadcrumb">
-        <p>Ti trovi in:<span lang="en"> Home</span></p>
+    <nav id="breadcrumb" aria-label="Percorso">
+        <p>Ti trovi in: <span lang="en">Home</span></a></p>
     </nav>
     <main class="colonne">
         <img id="imgIndex" src="images/logoTour2024.jpg"
@@ -201,7 +207,7 @@
                 href="https://www.ticketone.it/artist/pinguini-tattici-nucleari/">Ticketone</a>.</p>
     </main>
     <footer>
-        <p>Riccardo Zaupa & Alessandro Bressan - <span lang="en">All rights reserved.</span></p>
+        <p>Riccardo Zaupa &amp; Alessandro Bressan - <span lang="en">All rights reserved.</span></p>
     </footer>
 </body>
 
