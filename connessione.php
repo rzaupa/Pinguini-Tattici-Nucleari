@@ -5,10 +5,12 @@ namespace DB;
 class DBAccess
 {
     private const HOST_DB = "127.0.0.1";
-    private const DATABASE_NAME = "user";
-    private const USERNAME = "user";
-    private const PASSWORD = "password";
+    private const DATABASE_NAME = "abressan";
+    private const USERNAME = "abressan";
+    private const PASSWORD = "xoj7og9Ahgh0quah";
+
     private $connection;
+
     public function openDBconnection()
     {
         $this->connection = mysqli_connect(

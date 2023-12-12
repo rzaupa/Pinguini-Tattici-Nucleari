@@ -1,4 +1,4 @@
-USE mifranco;
+USE abressan;
 
 DROP TABLE IF EXISTS Traccia;
 DROP TABLE IF EXISTS Album;
