@@ -174,11 +174,12 @@ DISCOGRAFIA
 
 
 .album {
+    height: 15em;
     width: 15em;
     margin: 5em;
     transform: scale(1.0);
     transition: .1s;
-    height: 15em;
+    
     background-size: cover;
     /* ridimensiona l'immagine in modo da non distorcerla*/
 }
