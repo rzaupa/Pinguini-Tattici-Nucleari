@@ -1,6 +1,6 @@
 <?php
 
-require_once "connesione.php";
+require_once "connessione.php";
 
 use DB\DBAccess;
 

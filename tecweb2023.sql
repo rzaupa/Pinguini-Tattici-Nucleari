@@ -1,4 +1,4 @@
-USE rzaupa;
+USE abressan;
 
 DROP TABLE IF EXISTS Traccia;
 
