@@ -2,12 +2,12 @@
 
 namespace DB;
 
-class DBAccess
+class DBAccess 
 {
     private const HOST_DB = "127.0.0.1";
-    private const DATABASE_NAME = "user";
-    private const USERNAME = "user";
-    private const PASSWORD = "password";
+    private const DATABASE_NAME = "rzaupa";
+    private const USERNAME = "rzaupa";
+    private const PASSWORD = "hohNgesha4ceeX7u";
     private $connection;
     public function openDBconnection()
     {
