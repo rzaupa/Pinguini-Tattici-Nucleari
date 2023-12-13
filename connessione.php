@@ -56,8 +56,16 @@ class DBAccess
         }
     }
 
-    public function getTracceAlbum($id){
-        
+    public function getTracceAlbum($id)
+    {
+        "SELECT Traccia.Titolo,
+        Traccia.Esplicito,
+        Traccia.Durata,
+        Traccia.DataRadio,
+        Traccia.URLVideo
+    FROM Traccia
+    JOIN Album ON Traccia.Album=Album.id
+    WHERE Traccia.Album=$id";
     }
 
     public function closeConnection()
