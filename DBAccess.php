@@ -46,7 +46,6 @@ class DBAccess
         FROM Album
         LEFT JOIN Traccia ON Album.ID=Traccia.Album
         WHERE Album.ID=$id";
-        echo $query;
 
         $queryResult = mysqli_query($this->connection, $query) or die("Errore in DBAccess" . mysqli_error($this->connection));
         if (mysqli_num_rows($queryResult) != 0) {
