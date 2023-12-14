@@ -15,7 +15,7 @@ class DBAccess
             self::HOST_DB,
             self::DATABASE_NAME,
             self::USERNAME,
-            self::PASSWORD,
+            self::PASSWORD
         );
         return mysqli_connect_errno() == 0;
     }
