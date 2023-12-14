@@ -40,18 +40,20 @@ class DBAccess
     {
         $query = "SELECT Album.ID, 
         Album.Titolo, 
-        Copertina, 
-        DataPubblicazione,
-        SEC_TO_TIME(SUM(TIME_TO_SEC(Traccia.Durata)) as DurataAlbum,  
+        Album.Copertina, 
+        Album.DataPubblicazione,
+        SEC_TO_TIME(SUM(TIME_TO_SEC(Traccia.Durata))) as DurataAlbum 
         FROM Album
-        JOIN Traccia ON Album.ID=Traccia.Album
+        LEFT JOIN Traccia ON Album.ID=Traccia.Album
         WHERE Album.ID=$id";
+        echo $query;
 
         $queryResult = mysqli_query($this->connection, $query) or die("Errore in DBAccess" . mysqli_error($this->connection));
         if (mysqli_num_rows($queryResult) != 0) {
             $row = mysqli_fetch_assoc($queryResult);
+            $queryResult->free();
             return array($row["ID"], $row["Titolo"], $row["Copertina"], $row["DataPubblicazione"], $row["DurataAlbum"]);
-        } else {
+        } else {    
             return null;
         }
     }
