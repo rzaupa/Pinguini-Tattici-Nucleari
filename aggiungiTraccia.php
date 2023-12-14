@@ -51,9 +51,32 @@ if ($connOk) {
 }
 
 if (isset($_POST['submit'])) {
+    $album = pulisciInput($_POST["album"]);
+    $titolo = pulisciInput($_POST["titolo"]);
+    if (strlen($titolo) <= 2) {
+        $messaggiPerForm .= "<li>Il titolo deve essere presente ed essere formato da almeno 3 caratteri</li>";
+    }
+
+    $durata=pulisciInput($_POST["durata"]);
+    if(strlen($durata) ==0) {
+        $messaggiPerForm .= "<li>La durata è aaaaaaaaaaaa</li>";
+    }
+    else{
+        //da fare
+    }
+    //....
+
+    $urlVideo=pulisciInput($_POST[""]);
+    /*
+    if(strlen($urlVideo) && !filter_var()) {
+        //da fare
+    }
+    */
+
+    /* esercizio sbagliato da alex
     [
-        'ID' => $id,
-        'Titolo' => $titolo,
+        'album' => $id,
+        'titolo' => $titolo,
         'durata' => $durata,
         'esplicito' => $esplicito,
         'dataRadio' => $dataRadio,
@@ -61,7 +84,11 @@ if (isset($_POST['submit'])) {
         'note' => $note
     ] = $_POST;
     $connessione->insertNewTrack($id, $titolo, $durata, $esplicito, $dataRadio, $urlVideo, $note);
+    */
 }
+
+
+$connessione->closeConnection();
 
 echo str_replace("{listaAlbum}", $listaAlbum, $aggiungiTracciaHTML);
 echo str_replace("{messaggiForm}", $messaggiPerForm, $aggiungiTracciaHTML);
