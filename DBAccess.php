@@ -13,9 +13,9 @@ class DBAccess
     {
         $this->connection = mysqli_connect(
             self::HOST_DB,
-            self::DATABASE_NAME,
             self::USERNAME,
-            self::PASSWORD
+            self::PASSWORD,
+            self::DATABASE_NAME
         );
         return mysqli_connect_errno() == 0;
     }
