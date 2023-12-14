@@ -36,8 +36,4 @@ else{
     $album_string="<p>i sistemi sono momentaneamente fuori servizio, ci scusiamo per il disagio<p>";
 }
 
-echo str_replace('{album}', $album_string, $discografiaHTML);
-
-$discografiaHTML = file_get_contents("discografia.html");
-
 echo str_replace("{album}", $album_string, $discografiaHTML);
