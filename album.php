@@ -4,9 +4,7 @@ require_once "DBAccess.php";
 
 use DB\DBAccess;
 
-//require_once ".." . DIRECTORY_SEPARATOR . "connessione.php";
-
-$discografiaHTML = file_get_contents("albumTemplate.html");
+$albumHTML = file_get_contents("album.html");
 
 $connessione = new DBAccess();
 
@@ -29,8 +27,8 @@ if ($connOk) {
     $album_string = "<p>Album non esistente o id non corretto<p>";
 }
 
-echo str_replace("{NomeAlbum}", $album_title, $discografiaHTML);
-echo str_replace("{album}", $album_string, $discografiaHTML);
+echo str_replace("{NomeAlbum}", $album_title, $albumHTML);
+echo str_replace("{album}", $album_string, $albumHTML);
 
 /*
 {titoloAlbum}
