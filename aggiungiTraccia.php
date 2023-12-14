@@ -50,8 +50,17 @@ if ($connOk) {
     }
 }
 
-if (isset($_POST['submit'])){
-    
+if (isset($_POST['submit'])) {
+    [
+        'ID' => $id,
+        'Titolo' => $titolo,
+        'durata' => $durata,
+        'esplicito' => $esplicito,
+        'dataRadio' => $dataRadio,
+        'urlVideo' => $urlVideo,
+        'note' => $note
+    ] = $_POST;
+    $connessione->insertNewTrack($id, $titolo, $durata, $esplicito, $dataRadio, $urlVideo, $note);
 }
 
 echo str_replace("{listaAlbum}", $listaAlbum, $aggiungiTracciaHTML);
