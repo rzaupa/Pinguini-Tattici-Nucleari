@@ -1,39 +1,38 @@
 <?php
 
-require_once "connesione.php";
+require_once "DBAccess.php";
 
 use DB\DBAccess;
 
 //require_once ".." . DIRECTORY_SEPARATOR . "connessione.php";
 
-$discografiaHTML = file_get_contents("discografia.html");
+$discografiaHTML = file_get_contents("albumTemplate.html");
 
 $connessione = new DBAccess();
 
 $connOk = $connessione->openDBConnection();
 
-$album_array = "";
+$album_title = "";
 
 $album_string = "";
 
+$album_id = $_GET["id"];
+
 if ($connOk) {
-    $album_array = $connessione->getListaAlbum();
-    $connessione->closeConnection();
-
-    if ($album_array == null) {
-        $album_string .= '<p>non sono presenti album<p></dl>';
+    [$album_title, $copertina, $dataPubblicazione, $durataAlbum] = $connection->getAlbum($album_id);
+    if ($album_title != null) {
+        $album_string .= "<img src=\"$copertina\" id=\"albumCover\"><dl id=\"albumInfor\"><dt>Durata</dt><dd>" . $durataAlbum .
+            "</dd><dt>Data di uscita: </dt><dd><time datetime=\"$dataPubblicazione\">. 
+            date(\"j F Y" . strtotime($dataPubblicazione) . "</time></dd>";
     }
-
-    foreach ($album_array as $album) {
-        $album_string .= '<li><a id=\"' 
-        . $album['idCss'] .
-        "\" href=\"album.php? id="
-        .$album["ID"]
-        ."\">".$album["Titolo"]."</a></li>";
-    }
-}
-else{
-    $album_string="<p>i sistemi sono momentaneamente fuori servizio, ci scusiamo per il disagio<p>";
+} else {
+    $album_string = "<p>Album non esistente o id non corretto<p>";
 }
 
+echo str_replace("{NomeAlbum}", $album_title, $discografiaHTML);
 echo str_replace("{album}", $album_string, $discografiaHTML);
+
+/*
+{titoloAlbum}
+{informazioni album}
+*/
