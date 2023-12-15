@@ -23,9 +23,9 @@ if ($connOk) {
     }
 
     foreach ($album_array as $album) {
-        $album_string .= '<li><a id=\"'
+        $album_string .= '<li class="album" id="'
             . $album['idCss'] .
-            "\" href=\"album.php?id="
+            "\"> <a href=\"album.php?id="
             . $album["ID"]
             . "\">" . $album["Titolo"] . "</a></li>";
     }
