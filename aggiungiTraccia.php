@@ -121,7 +121,16 @@ $aggiungiTracciaHTML = str_replace("{messaggiForm}", $messaggiPerForm, $aggiungi
 $aggiungiTracciaHTML = str_replace("{listaAlbum}", $listaAlbum, $aggiungiTracciaHTML);
 $aggiungiTracciaHTML = str_replace("{valoreTitolo}", $titolo, $aggiungiTracciaHTML);
 $aggiungiTracciaHTML = str_replace("{valoreDurata}", $durata, $aggiungiTracciaHTML);
-$aggiungiTracciaHTML = str_replace("{valoreDurata}", $durata, $aggiungiTracciaHTML); //contenuto esplicito
+if($esplicito=="Yes"){
+    $aggiungiTracciaHTML = str_replace("{checkedYes}", "checked", $aggiungiTracciaHTML);
+    $aggiungiTracciaHTML = str_replace("{checkedNo}", "", $aggiungiTracciaHTML);
+}
+elseif($esplicito== "No"){
+    $aggiungiTracciaHTML = str_replace("{checkedNo}", "checked", $aggiungiTracciaHTML);    
+    $aggiungiTracciaHTML = str_replace("{checkedYes}", "", $aggiungiTracciaHTML);
+}
 $aggiungiTracciaHTML = str_replace("{valoreData}", $dataRadio, $aggiungiTracciaHTML);
+$aggiungiTracciaHTML = str_replace("{valoreUrlVideo}", $urlVideo, $aggiungiTracciaHTML);
+$aggiungiTracciaHTML = str_replace("{valoreNote}", $note, $aggiungiTracciaHTML);
 
 echo $aggiungiTracciaHTML;
