@@ -22,7 +22,13 @@ class DBAccess
 
     public function getListaAlbum()
     {
-        $query = "SELECT ID, Titolo, Copertina, idCss FROM Album ORDER BY DataPubblicazione DESC"; //da fare
+        $query = "SELECT ID, 
+        Titolo, 
+        Copertina, 
+        idCss 
+        FROM Album 
+        ORDER BY DataPubblicazione DESC";
+
         $queryResult = mysqli_query($this->connection, $query) or die("Errore in DBAccess" . mysqli_error($this->connection));
         if (mysqli_num_rows($queryResult) != 0) {
             $result = array();
@@ -52,22 +58,35 @@ class DBAccess
             $row = mysqli_fetch_assoc($queryResult);
             $queryResult->free();
             return array($row["ID"], $row["Titolo"], $row["Copertina"], $row["DataPubblicazione"], $row["DurataAlbum"]);
-        } else {    
+        } else {
             return null;
         }
     }
 
     public function getTracceAlbum($id)
     {
-        "SELECT Traccia.Titolo,
-        Traccia.Esplicito,
-        Traccia.Durata,
-        Traccia.DataRadio,
-        Traccia.URLVideo
-    FROM Traccia
-    JOIN Album ON Traccia.Album=Album.id
-    WHERE Traccia.Album=$id";
+        $query = "SELECT ID,
+        Titolo,
+        Durata,
+        Esplicito,
+        DataRadio,
+        URLVideo
+        FROM Traccia
+        WHERE Album=$id";
+
+        $queryResult = mysqli_query($this->connection, $query) or die("Errore in DBAccess" . mysqli_error($this->connection));
+        if (mysqli_num_rows($queryResult) != 0) {
+            $result = array();
+            while ($row = mysqli_fetch_array($queryResult)) {
+                $result[] = $row;
+            }
+            $queryResult->free();
+            return $result;
+        } else {
+            return null;
+        }
     }
+
 
     public function insertNewTrack($album, $titolo, $durata, $esplicito, $dataRadio, $urlVideo, $note)
     {
