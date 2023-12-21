@@ -12,6 +12,7 @@
             only screen and (max-device-width:600px)">
     <link rel="stylesheet" type="text/css" href="print.css" media="print">
     <link rel="shortcut icon" type="image/png" href="images/icon-penguin.png">
+    <script src="form.js"></script>
 </head>
 
 <body>
@@ -37,38 +38,42 @@
     <main id="content">
         <section id="sectionAggiungiBrano">
             <h2>Inserisci una nuova traccia</h2>
-            <form method="post" action="aggiungiTraccia.php">
-                {messaggiForm}
+            <form method="post" action="aggiungiTraccia.php" onsubmit="">
                 <fieldset>
                     <legend>Album</legend>
                     <label for="album">Seleziona l'album: </label>
-                    <select id="album" name="album" required="required">
-                        {listaAlbum}
+                    <select id="album" name="album">
+                        <option value="1">Fake News</option>
+                        <option value="2">Ahia!</option>
+                        <option value="3">Fuori dall'Hype Ringo Starr</option>
+                        <option value="4">Fuori dall'Hype</option>
+                        <option value="5">Gioventù brucata</option>
+                        <option value="6">Diamo un calcio all'adilà</option>
+                        <option value="7">Il Re è nudo</option>
                     </select>
                 </fieldset>
                 <fieldset>
                     <legend>Informazioni sulla traccia</legend>
                     <label for="titolo">Titolo: </label>
-                    <input type="text" name="titolo" id="titolo" value="{valoreTitolo}" /><br />
+                    <span><input type="text" name="titolo" id="titolo" value="" /></span><br />
                     <label for="durata">Durata: </label>
-                    <input type="time" name="durata" id="durata" min="00:01" max="10:00" value="{valoreDurata}"
-                        required="required" />
+                    <span><input type="text" name="durata" id="durata" value="" /></span>
                 </fieldset>
                 <fieldset>
                     <legend>Contenuto Esplicito</legend>
                     <label for="rYes">Si</label>
-                    <input type="radio" name="esplicito" id="rYes" value="Yes" {checkedYes} />
+                    <input type="radio" name="esplicito" id="rYes" value="Yes" />
                     <label for="rNo">No</label>
-                    <input type="radio" name="esplicito" id="rNo" value="No" {checkedNo} />
+                    <span><input type="radio" name="esplicito" id="rNo" value="No" /></span>
                 </fieldset>
                 <fieldset>
                     <legend>Informazioni aggiuntive</legend>
                     <label for="dataRadio">Data del primo passaggio in radio: </label>
-                    <input type="date" name="dataRadio" id="dataRadio" value="{valoreData}" /><br />
+                    <span><input type="text" name="dataRadio" id="dataRadio" value="" /></span><br />
                     <label for="urlVideo">URL del video: </label>
-                    <input type="text" name="urlVideo" id="urlVideo" value="{valoreUrlVideo}" /><br />
+                    <span><input type="text" name="urlVideo" id="urlVideo" /></span><br />
                     <label for="note">Note: </label>
-                    <input type="text" name="note" id="note" value="{valoreNote}"/>
+                    <input type="text" name="note" id="note" />
                 </fieldset>
                 <fieldset>
                     <legend>Bottoni</legend>
