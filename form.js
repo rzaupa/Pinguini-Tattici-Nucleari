@@ -34,6 +34,16 @@ function validateDuration(inputDuration) {
         "/^0\d:[0-5]\d$/",
         "Inserire la durata nel formato corretto MM:SS o superiore a 10 minuti"
     );
+    /*
+    removeChildInput(inputDuration);
+    if ((inputDuration.value.search(/^\d{2}:\d{2}$/) != 0) || (inputDuration.value > "10:00")) {
+        showError(inputDuration, "Inserire la durata nel formato corretto MM:SS o superiore a 10 minuti");
+        inputDuration.focus();  
+        inputDuration.select();
+        return false;
+    }
+    return true;
+    */
 }
 
 function validateDate(inputDate) {
