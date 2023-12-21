@@ -17,9 +17,14 @@ function createErrorFunction (regex, msg){
 }
 
 function caricamento(){
-  document.getElementById("titolo").onblur = createErrorFunction(/^.{3}$/,"Almeno 3 caratteri");
-  document.getElementById("durata").onblur = createErrorFunction(/^0\d:[0-5]\d$/,"Il formato deve essere 分分:秒秒");
-  document.getElementById("dataRadio").onblur =  createErrorFunction(/^\d{4}-\d{2}-\d{2}$/,"Il formato deve essere AAAA-MM-DD");
+  [
+    ["titolo"   , /^.{3}$/             , "Almeno 3 caratteri"               ],
+    ["durata"   , /^0\d:[0-5]\d$/      , "Il formato deve essere 分分:秒秒" ],
+    ["dataRadio", /^\d{4}-\d{2}-\d{2}$/, "Il formato deve essere AAAA-MM-DD"],
+  ].forEach(
+      (coll) => document.getElementById(call[0]) = createErrorFunction(call[1],call[2])
+    );
+
   document.getElementById("urlVideo").onblur =  function () {
     try{
       new URL(this.value);
