@@ -12,20 +12,28 @@ function caricamento() {
     inputURL.onblur = function () { validateURL(this) };
 }
 
+function validateTemplate(input, regex, msg) {
+    removeChildInput(input);
+    if (input.value.search(regex) != 0) {
+        showError(input, msg);
+        input.focus();
+        input.select();
+        return false;
+    }
+    return true;
+}
+
 function validateTitle(inputTitle) {
     //TO DO
     return true;
 }
 
 function validateDuration(inputDuration) {
-    removeChildInput(inputDuration);
-    if ((inputDuration.value.search(/^\d{2}:\d{2}$/) != 0) || (inputDuration.value > "10:00")) {
-        showError(inputDuration, "Inserire la durata nel formato corretto MM:SS o superiore a 10 minuti");
-        inputDuration.focus();
-        inputDuration.select();
-        return false;
-    }
-    return true;
+    return validateTemplate(
+        inputDuration,
+        "/^0\d:[0-5]\d$/",
+        "Inserire la durata nel formato corretto MM:SS o superiore a 10 minuti"
+    );
 }
 
 function validateDate(inputDate) {
@@ -63,6 +71,7 @@ function showError(tag, string) {
 }
 
 function removeChildInput(input) {
+    console.log("AAAAAAAAAAAAAAA");
     padre = input.parentNode;
     if (padre.children.length == 2) {
         padre.removeChild(padre.children[1]);
