@@ -22,7 +22,7 @@ function caricamento(){
     ["durata"   , /^0\d:[0-5]\d$/      , "Il formato deve essere 分分:秒秒" ],
     ["dataRadio", /^\d{4}-\d{2}-\d{2}$/, "Il formato deve essere AAAA-MM-DD"],
   ].forEach(
-      (coll) => document.getElementById(call[0]).onblur = createErrorFunction(call[1],call[2])
+      ([id,regex,msg]) => document.getElementById(id).onblur = createErrorFunction(regex,msg)
     );
 
   document.getElementById("urlVideo").onblur =  function () {
