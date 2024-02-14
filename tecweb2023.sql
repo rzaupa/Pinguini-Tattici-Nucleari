@@ -20,7 +20,7 @@ VALUES
         1,
         "Fake News",
         "2022-12-02",
-        "Pop",
+        "Pop",  
         "images/fakenews.jpg",
         "fakeNews"
     ),
