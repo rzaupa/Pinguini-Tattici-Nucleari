@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Cambia se il tuo branch predefinito ha un nome diverso
+      - rich_js  # Cambia se il tuo branch predefinito ha un nome diverso
 
 jobs:
   deploy:
