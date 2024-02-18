@@ -1,0 +1,33 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - rich_js  # Cambia se il tuo branch predefinito ha un nome diverso
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'  # Cambia alla versione di PHP necessaria
+
+    - name: Install dependencies
+      run: composer install  # Se stai usando Composer per gestire le dipendenze PHP
+
+    - name: Build your site
+      run: |
+        # Comandi per generare il tuo sito statico o compilare il codice PHP, ad esempio:
+        # php your_build_script.php
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./your_deploy_directory  # Cambia con la directory in cui si trova il tuo sito compilato
